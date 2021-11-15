@@ -18,8 +18,8 @@ app.use(cors({ origen: '*' }))
 
 
 //Rutas
-app.use('/jefe', require('./routes/Jefe.route'))
-app.use('/empleados', require('./routes/empleado.route'))
+app.use('/user', require('./routes/User.route'))
+//app.use('/empleados', require('./routes/empleado.route'))
 
 
 //Puerto
