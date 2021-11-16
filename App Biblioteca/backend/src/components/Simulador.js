@@ -13,13 +13,18 @@ const Simulador = () => {
         //trim evalua si hay cadena de caracteres
 
 
-        if (!cantidad.trim()){
+        if (!valordelprestamo.trim()){
             console.log ("El valor del prestamo esta vacio, por favor ingresa la informacion solicitada")
             return
         }
 
-        if (!edad.trim()){
+        if (!cuotas.trim()){
             console.log ("La cantidad de cuotas esta vacia,por favor ingresa la informacion solicitada ")
+            return
+        }
+
+        if (!tdi.trim()){
+            console.log ("La tasa efectiva mensual esta vacia,por favor ingresa la informacion solicitada ")
             return
         }
 
@@ -44,7 +49,7 @@ const Simulador = () => {
                 placeholder="Introduce la cantidad de cuotas"
                 className="form-control mb-3"
                 type="number"
-                onChange= {(e)=>{setEdad(e.target.value)}}
+                onChange= {(e)=>{setCuotas(e.target.value)}}
                 />
 
                 <input
