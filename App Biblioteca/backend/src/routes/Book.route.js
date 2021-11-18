@@ -16,12 +16,12 @@ router.put('/actualizar/:id', BookCtrl.actualizar)
 router.get('/buscar/:nombre', BookCtrl.buscarLibro)
 
 //router.post('/crear',  Auth.verificarToken,  BookCtrl.crear)
-//router.get('/listarEmpleados',  Auth.verificarToken, BookCtrl.listar)
+//router.get('/listarLibros',  Auth.verificarToken, BookCtrl.listar)
 //router.get('/listar/:id',  Auth.verificarToken, BookCtrl.listarId)
-//router.get('/listarEmpleadosJefe/:id', Auth.verificarToken, BookCtrl.empleadoDeunJefe)
+//router.get('/listarLibroUsuario/:id', Auth.verificarToken, BookCtrl.LibroDeUnUsuario)
 //router.delete('/eliminar/:id', Auth.verificarToken, BookCtrl.eliminar)
 //router.put('/actualizar/:id', Auth.verificarToken, BookCtrl.actualizar)
-//router.get('/buscar/:nombres', Auth.verificarToken, BookCtrl.buscarEmpleado)
+//router.get('/buscar/:nombre', Auth.verificarToken, BookCtrl.buscarLibro)
 
 
 module.exports=router
