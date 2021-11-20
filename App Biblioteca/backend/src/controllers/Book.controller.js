@@ -82,7 +82,7 @@ BookCtrl.buscarLibro = async(req, res)=>{
 
     const nombre = req.params.name
 
-    const respuesta = await Book.findOne({name:{ $regex:".*" +nombre+ ".*"}})
+    const respuesta = await Book.find({name:{ $regex:".*" +nombre+ ".*"}})
 
     res.json(respuesta)
 

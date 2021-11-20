@@ -12,7 +12,8 @@ var bookSchema = new schema({
         type: Number
     },
     available: {
-        type: Boolean
+        type: Boolean,
+        default: true
     },
     assign:{
         type:String
