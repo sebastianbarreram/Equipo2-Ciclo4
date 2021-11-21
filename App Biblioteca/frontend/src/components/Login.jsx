@@ -30,10 +30,12 @@ export default function Login() {
             const token = respuesta.data.token
             const nombre = respuesta.data.nombre
             const idusuario = respuesta.data.id
+            const administrador = respuesta.data.administrador
 
             sessionStorage.setItem('token', token)
             sessionStorage.setItem('nombre', nombre)
             sessionStorage.setItem('idusuario', idusuario)
+            sessionStorage.setItem('administrador',administrador)
             window.location.href='/prestamos'
 
             Swal.fire({

@@ -66,6 +66,7 @@ UserCtrl.login = async(req,res)=>{
             mensaje: 'Bienvenido',
             id: usuario.id,
             nombre: usuario.nombre,
+            administrador: usuario.administrador,
             token
 
 

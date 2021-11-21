@@ -80,9 +80,9 @@ BookCtrl.actualizar=async(req,res)=>{
 
 BookCtrl.buscarLibro = async(req, res)=>{
 
-    const nombre = req.params.name
+    const name = req.params.nombre
 
-    const respuesta = await Book.find({name:{ $regex:".*" +nombre+ ".*"}})
+    const respuesta = await Book.find({name:{ $regex:".*" +name+ ".*"}})
 
     res.json(respuesta)
 

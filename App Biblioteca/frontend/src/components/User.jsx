@@ -6,6 +6,7 @@ import Swal from 'sweetalert2'
 export default function Prestamos() {
     const [libros, setLibros] = useState([])
 
+
     const [name, setName] = useState('')
     const [author, setAuthor] = useState('')
     const [year, setYear] = useState('')
@@ -20,8 +21,9 @@ export default function Prestamos() {
 
 
     const obtenerLibros = async () => {
+        const id = sessionStorage.getItem('idusuario')
         const token = sessionStorage.getItem('token')
-        const respuesta = await Axios.get('/book/listarLibros',
+        const respuesta = await Axios.get('/book/listarLibroUsuario/' + id,
             {
                 headers: { 'autorizacion': token }
             })
@@ -37,7 +39,7 @@ export default function Prestamos() {
         }
         const buscar = e.target.value
         const token = sessionStorage.getItem('token')
-        const respuesta = await Axios.get(`/book/buscar/${buscar}`, {
+        const respuesta = await Axios.get(`/book/listar/${buscar}/${sessionStorage.getItem('idusuario')}`, {
             headers: { 'autorizacion': token }
 
         })
@@ -64,7 +66,6 @@ export default function Prestamos() {
         obtenerLibros()
 
     }
-
 
     const guardar = async (e) => {
         e.preventDefault()
@@ -145,7 +146,7 @@ export default function Prestamos() {
                         <div className="col-md-12">
                             <div className="card">
                                 <div className="card-header">
-                                    <h4>Libros</h4>
+                                    <h4>Libros de {sessionStorage.getItem('nombre')}</h4>
 
                                 </div>
 
@@ -170,8 +171,8 @@ export default function Prestamos() {
                                                     <td>{libro.year}</td>
 
                                                     <td>
-                                                    <Link className='btn btn-warning mr-1' to={'/editar/'+libro._id}>EDITAR</Link>
-                                                        <button className='btn btn-danger mr-1' onClick={() => eliminar(libro._id)}>ELIMINAR</button>
+                                                        <Link className='btn btn-warning mr-1' to={'/editar/' + libro._id}>Editar</Link>
+                                                        <button className='btn btn-danger mr-1' onClick={() => eliminar(libro._id)}>Eliminar</button>
                                                     </td>
 
 
@@ -194,6 +195,7 @@ export default function Prestamos() {
                 </div>
 
             </section>
+
 
 
 
@@ -238,8 +240,6 @@ export default function Prestamos() {
                 </div>
 
             </div>
-
-
 
 
 

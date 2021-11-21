@@ -5,6 +5,13 @@ import Header from './components/Header'
 import Login from './components/Login'
 import Prestamos from './components/Prestamos';
 import Registro from './components/Registro';
+import User from './components/User';
+import Actualizar from "./components/Actualizar";
+
+
+
+
+
 
 function App() {
   return (
@@ -14,6 +21,9 @@ function App() {
       <Route path='/' exact component={Login}/>
       <Route path='/registrar' exact component={Registro}/>
       <Route path='/prestamos' exact component={Prestamos}/>
+      <Route path='/usuario' exact component={User}/>
+      <Route path='/editar' exact component={Actualizar}/>
+
 
     </Router>
   );
