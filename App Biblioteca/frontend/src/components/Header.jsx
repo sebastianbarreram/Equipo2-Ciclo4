@@ -26,7 +26,7 @@ export default function Header() {
                             <div className="nav navbar-nav">
                                 <Link className="nav-item nav-link" to="/prestamos">Préstamos</Link>
                                 <Link className="nav-item nav-link" to="/usuario">Usuario</Link>
-                                <Link className="nav-item nav-link" to="/"><i className="fas fa-user"></i> Bienvenido</Link>
+                                <Link className="nav-item nav-link" to="/iniciosesion"><i className="fas fa-user"></i> Inicio sesión</Link>
                                 <Link className="nav-item nav-link" onClick={() => salir()} to="/"><i className="fas fa-user-times"></i> Salir</Link>
                                 <Link className="nav-item nav-link" to="/registrar"><i className="fas fa-user-plus"></i> Registrar</Link>
 

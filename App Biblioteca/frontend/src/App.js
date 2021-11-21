@@ -7,6 +7,7 @@ import Prestamos from './components/Prestamos';
 import Registro from './components/Registro';
 import User from './components/User';
 import Actualizar from "./components/Actualizar";
+import { PaginaInicio } from './components/PaginaInicio';
 
 
 
@@ -18,7 +19,8 @@ function App() {
     <Router>
       <Header/>
 
-      <Route path='/' exact component={Login}/>
+      <Route path='/' exact component={PaginaInicio}/>
+      <Route path='/iniciosesion' exact component={Login}/>
       <Route path='/registrar' exact component={Registro}/>
       <Route path='/prestamos' exact component={Prestamos}/>
       <Route path='/usuario' exact component={User}/>
