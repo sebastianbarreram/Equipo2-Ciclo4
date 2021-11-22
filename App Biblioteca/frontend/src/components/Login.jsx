@@ -36,7 +36,7 @@ export default function Login() {
             sessionStorage.setItem('nombre', nombre)
             sessionStorage.setItem('idusuario', idusuario)
             sessionStorage.setItem('administrador',administrador)
-            window.location.href='/prestamos'
+            window.location.href='/'
 
             Swal.fire({
                 icon: 'success',
