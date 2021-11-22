@@ -1,10 +1,9 @@
 import React, {useState} from 'react'
-import Button from 'react-bootstrap/Button';
-import Cards from 'react-bootstrap/Cards';
-import { Link } from 'react-router-dom';
-import Axios from 'axios'
-import Swal from 'sweetalert2'
-
+//import Button from 'react-bootstrap/Button';
+//import Cards from 'react-bootstrap/Cards';
+//import { Link } from 'react-router-dom';
+//import Axios from 'axios'
+//import Swal from 'sweetalert2'
 
 
 const Simulador = () => {
@@ -12,8 +11,11 @@ const Simulador = () => {
     const[valordelprestamo, setValordelprestamo]=useState("")
     const[cuotas, setCuotas]=useState("")
     const[tdi, setTdi]=useState("")
+    
 
     const validar=(event)=>{
+        
+
         //capturar el evento submit del formulario y evitar que la pagina se recargue
         event.preventDefault()
         console.log("pulsado el boton")
@@ -34,12 +36,31 @@ const Simulador = () => {
             console.log ("La tasa efectiva mensual esta vacia,por favor ingresa la informacion solicitada ")
             return
         }
+        
 
-    }
+        //  const calcularprestamo => Funcion 
+
+    }        
+
 
 
     return (
+
+
         <div className="container">
+            <header className='py-2 bg-primary text-white'>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-6">
+                            <h1><i className="fas fa-pencil-alt">Simulador de prestamos</i></h1>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+
+
+
             <form onSubmit={validar} className="form-groups">
                 <input
                 placeholder="Introduce el valor del prestamo"
@@ -69,6 +90,8 @@ const Simulador = () => {
 
                 <input className="btn btn-info btn-block mb-3" type="submit"/>
             </form>
+
+             {/* Card * guiarse de inicio sesion*/}
 
         </div>
     )
