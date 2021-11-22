@@ -1,8 +1,18 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
 import logo from './img/logobiblioteca.png';
 
 export default function Header() {
+
+    const [menu, setMenu] = useState(false)
+
+    useEffect(() => {
+        if (sessionStorage.getItem('token')) {
+            setMenu(true)
+        }
+
+    }, [])
+
 
     const salir = () => {
 
@@ -26,10 +36,21 @@ export default function Header() {
                             <div className="nav navbar-nav">
                                 <Link className="nav-item nav-link" to="/simulador">Simulador</Link>
                                 <Link className="nav-item nav-link" to="/prestamos">Préstamos</Link>
-                                <Link className="nav-item nav-link" to="/usuario">Usuario</Link>
-                                <Link className="nav-item nav-link" to="/iniciosesion"><i className="fas fa-user"></i> Inicio sesión</Link>
-                                <Link className="nav-item nav-link" onClick={() => salir()} to="/"><i className="fas fa-user-times"></i> Salir</Link>
-                                <Link className="nav-item nav-link" to="/registrar"><i className="fas fa-user-plus"></i> Registrar</Link>
+
+                                {
+                                    menu ?
+                                        <div className="nav navbar-nav" id="navbarSupportedContent">
+                                            <Link className="nav-item nav-link" to="/usuario"><i className='fas fa-user'></i>{sessionStorage.getItem('nombre')}</Link>
+                                            <Link className="nav-item nav-link" onClick={() => salir()} to="/"><i className="fas fa-user-times"></i> Salir</Link>
+                                        </div>
+                                        :
+                                        <div className="nav navbar-nav" id="navbarSupportedContent">
+                                            <Link className="nav-item nav-link" to="/iniciosesion"><i className="fas fa-user"></i> Inicio sesión</Link>
+                                            <Link className="nav-item nav-link" to="/registrar"><i className="fas fa-user-plus"></i> Registrar</Link>
+                                        </div>
+                                }
+
+
 
                             </div>
                         </ul>
