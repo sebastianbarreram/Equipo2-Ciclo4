@@ -2,74 +2,47 @@ import React from 'react'
 import imagen1 from './img/libros.jpg';
 import imagen2 from './img/banner.jpg';
 
-export const PaginaInicio = () => {
+export default function Paginainicio() {
     return (
         <>
-            {/* <!-- Carousel Bootstrap --> */}
-            <div id="demo" className="carousel slide" data-bs-ride="carousel">
-                {/* <!-- Indicators/dots --> */}
-                <div className="carousel-indicators">
-                    <button
-                        type="button"
-                        data-bs-target="#demo"
-                        data-bs-slide-to="0"
-                        className="active"
-                    ></button>
-                    <button
-                        type="button"
-                        data-bs-target="#demo"
-                        data-bs-slide-to="1"
-                    ></button>
-                    <button
-                        type="button"
-                        data-bs-target="#demo"
-                        data-bs-slide-to="2"
-                    ></button>
-                </div>
 
-                {/* <!-- The slideshow/carousel --> */}
+            <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
+                <ol className="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
                 <div className="carousel-inner">
                     <div className="carousel-item active">
-                        <img src={imagen1} className="d-block imagen-custom" alt="" />
+                        <img src={imagen1} className="d-block w-100 imagen-custom" alt="..." />
                     </div>
                     <div className="carousel-item">
-                        <img src={imagen2} className="d-block imagen-custom" alt=""  />
+                        <img src={imagen2} className="d-block w-100 imagen-custom" alt="..." />
                     </div>
                     <div className="carousel-item">
-                        <div
-                            className="container-fluid p-5 bg-dark text-white imagen-custom2">
+                        <div className="container-fluid p-5 bg-dark text-white imagen-custom active text-center">
                             <h1>Tablero de anuncios</h1>
                             <p>
-                                En este párrafo se puede agregar cualquier información relevante
-                                para la biblioteca.<br />
-                                Puede contener información de actividades próximas a realizar e
-                                información de interés general para la comunidad a la que esté
-                                dirigida la página.<br />
-                                Con esto se comprueba que podemos agregar cualquier tipo de
-                                elementos en el slider.
+                                Horario de atención al público:<br />
+                                Lunes a viernes<br />
+                                8:00 am - 6:00 pm<br /><br />
+                                Curso de ajedrez:<br />
+                                Martes - Jueves<br />
+                                4:30 pm - 6:00 pm
                             </p>
                         </div>
                     </div>
                 </div>
-
-                {/* <!-- Left and right controls/icons --> */}
-                <button
-                    className="carousel-control-prev"
-                    type="button"
-                    data-bs-target="#demo"
-                    data-bs-slide="prev"
-                >
-                    <span className="carousel-control-prev-icon"></span>
-                </button>
-                <button
-                    className="carousel-control-next"
-                    type="button"
-                    data-bs-target="#demo"
-                    data-bs-slide="next"
-                >
-                    <span className="carousel-control-next-icon"></span>
-                </button>
+                <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span className="sr-only">Previous</span>
+                </a>
+                <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span className="sr-only">Next</span>
+                </a>
             </div>
+
         </>
     )
 }

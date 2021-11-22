@@ -7,7 +7,7 @@ import Prestamos from './components/Prestamos';
 import Registro from './components/Registro';
 import User from './components/User';
 import Actualizar from "./components/Actualizar";
-import { PaginaInicio } from './components/Paginainicio';
+import Paginainicio from './components/Paginainicio';
 import Simulador from './components/Simulador';
 
 
@@ -20,7 +20,7 @@ function App() {
     <Router>
       <Header/>
 
-      <Route path='/' exact component={PaginaInicio}/>
+      <Route path='/' exact component={Paginainicio}/>
       <Route path='/iniciosesion' exact component={Login}/>
       <Route path='/simulador' exact component={Simulador}/>
       <Route path='/registrar' exact component={Registro}/>

@@ -102,7 +102,7 @@ export default function Prestamos() {
     return (
         <div>
 
-            <header className='py-2 bg-primary text-white'>
+            <header className='py-2'>
                 <div className="container">
                     <div className="row">
                         <div className="col-md-6">
