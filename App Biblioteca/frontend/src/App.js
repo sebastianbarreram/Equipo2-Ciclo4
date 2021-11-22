@@ -7,7 +7,7 @@ import Prestamos from './components/Prestamos';
 import Registro from './components/Registro';
 import User from './components/User';
 import Actualizar from "./components/Actualizar";
-import { PaginaInicio } from './components/PaginaInicio';
+import { PaginaInicio } from './components/Paginainicio';
 
 
 
