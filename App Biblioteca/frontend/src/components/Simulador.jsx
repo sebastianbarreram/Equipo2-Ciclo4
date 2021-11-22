@@ -1,4 +1,11 @@
 import React, {useState} from 'react'
+import Button from 'react-bootstrap/Button';
+import Cards from 'react-bootstrap/Cards';
+import { Link } from 'react-router-dom';
+import Axios from 'axios'
+import Swal from 'sweetalert2'
+
+
 
 const Simulador = () => {
     
@@ -68,3 +75,5 @@ const Simulador = () => {
 }
 
 export default Simulador
+
+
