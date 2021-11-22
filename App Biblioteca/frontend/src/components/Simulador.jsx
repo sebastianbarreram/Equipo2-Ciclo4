@@ -38,7 +38,14 @@ const Simulador = () => {
         }
         
 
-        //  const calcularprestamo => Funcion 
+        // eslint-disable-next-line
+        const calcularcuota = () => {
+              
+            // se hace la formula considerando el siguiente link https://www.youtube.com/watch?v=N1-i1pXYXOE&t=161s
+            //cuotaestimada= (valordelprestamo*(tdi/100))/1- ((1+(tdi/100)))^ (cuotas*-1)
+            }
+
+         //return cuotaestimada
 
     }        
 
@@ -87,9 +94,11 @@ const Simulador = () => {
                 onChange= {(e)=>{setTdi(e.target.value)}}
                 />
 
+                <button class="btn btn-primary btn-info btn-block " type="submit">Calcular</button>
 
-                <input className="btn btn-info btn-block mb-3" type="submit"/>
             </form>
+
+                
 
              {/* Card * guiarse de inicio sesion*/}
 
