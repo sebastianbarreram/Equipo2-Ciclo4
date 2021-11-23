@@ -9,25 +9,32 @@ export default function Actualizar(props) {
     const [name, setName] = useState('')
     const [author, setAuthor] = useState('')
     const [year, setYear] = useState('')
+    const [available, setAvailable] = useState('')
+    const [assign, setAssign] = useState('')
+
+
 
     useEffect(() => {
-        // obtenerLibro()
+        obtenerLibro()
 
     }, [])
 
 
-    // const obtenerLibro = async () => {
-    //     const id = props.match.params.id
-    //     const token = sessionStorage.getItem('token')
-    //     const respuesta = await Axios.get('/book/listar/' + id, {
-    //         headers: { 'autorizacion': token }
-    //     })
-    //     console.log(respuesta.data)
-    //     setName(respuesta.data.name)
-    //     setYear(respuesta.data.year)
-    //     setAuthor(respuesta.data.author)
-
-    // }
+    const obtenerLibro = async () => {
+        const id = props.match.params.id
+        console.log(id)
+        console.log(id)
+        const token = sessionStorage.getItem('token')
+        const respuesta = await Axios.get('/book/listar/' + id, {
+            headers: { 'autorizacion': token }
+        })
+        console.log(respuesta.data)
+        setName(respuesta.data.name)
+        setYear(respuesta.data.year)
+        setAuthor(respuesta.data.author)
+        setAvailable(respuesta.data.available)
+        setAssign(respuesta.data.assign)
+    }
 
 
 
@@ -36,10 +43,13 @@ export default function Actualizar(props) {
         e.preventDefault();
         const id = props.match.params.id
         const token = sessionStorage.getItem('token')
+
         const libro = {
             name,
             year,
             author,
+            available,
+            assign
         }
 
         const respuesta = await Axios.put('/book/actualizar/' + id, libro, {
@@ -72,19 +82,30 @@ export default function Actualizar(props) {
                         <form onSubmit={actualizar}>
                             <div className="form-group">
                                 <label >Nombre</label>
-                                <input type="text" className='form-control required' onChange={(e) => setName(e.target.value)} />
+                                <input type="text" className='form-control required' onChange={(e) => setName(e.target.value)} value={name} />
                             </div>
 
                             <div className="form-group">
                                 <label >Año</label>
-                                <input type="text" className='form-control required' onChange={(e) => setYear(e.target.value)} />
+                                <input type="text" className='form-control required' onChange={(e) => setYear(e.target.value)} value={year} />
                             </div>
 
                             <div className="form-group">
                                 <label >Autor</label>
-                                <input type="text" className='form-control required' onChange={(e) => setAuthor(e.target.value)} />
+                                <input type="text" className='form-control required' onChange={(e) => setAuthor(e.target.value)} value={author} />
                             </div>
 
+                            <div className="form-group">
+                                <label >Disponible</label>
+                                <input type="text" className='form-control required' onChange={(e) => setAvailable(e.target.value)} value={available} />
+                            </div>
+
+                            <div className="form-group">
+                                <label >Asignado a</label>
+                                <input type="text" className='form-control required' onChange={(e) => setAssign(e.target.value)} value={assign} />
+                            </div>
+
+                            
                             <div className="form-group">
                                 <button className='btn btn-primary' type='submit'>EDITAR</button>
 

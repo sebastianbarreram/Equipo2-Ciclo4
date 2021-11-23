@@ -20,8 +20,6 @@ export default function Prestamos() {
         obtenerLibros()
 
         if (sessionStorage.getItem('administrador') === 'true') {
-
-            console.log("Entra al if true 2")
             setAdmininistrador(true)
         }
 
@@ -173,10 +171,11 @@ export default function Prestamos() {
                                                 <thead className='thead-dark'>
                                                     <tr>
                                                         <th scope="col">#</th>
-                                                        <th scope="col">NOMBRE</th>
-                                                        <th scope="col">AUTOR</th>
-                                                        <th scope="col">AÑO</th>
-                                                        <th scope="col">OPCIONES</th>
+                                                        <th scope="col">Nombre</th>
+                                                        <th scope="col">Autor</th>
+                                                        <th scope="col">Año</th>
+                                                        <th scope="col">Disponible</th>
+                                                        <th scope="col">Opciones</th>
 
                                                     </tr>
 
@@ -190,9 +189,15 @@ export default function Prestamos() {
                                                                 <td>{libro.name}</td>
                                                                 <td>{libro.author}</td>
                                                                 <td>{libro.year}</td>
+                                                                {
+                                                                    libro.available ?
+                                                                        <td>Si</td>
+                                                                        :
+                                                                        <td>No</td>
+                                                                }
 
                                                                 <td>
-                                                                    <Link className='btn btn-warning mr-1' to={'/editar/' + libro._id}>EDITAR</Link>
+                                                                    <Link className='btn btn-warning mr-1' to={'/editar/' + libro._id} >EDITAR</Link>
                                                                     <button className='btn btn-danger mr-1' onClick={() => eliminar(libro._id)}>ELIMINAR</button>
                                                                 </td>
 
@@ -323,6 +328,7 @@ export default function Prestamos() {
                                                         <th scope="col">Nombre</th>
                                                         <th scope="col">Autor</th>
                                                         <th scope="col">Año</th>
+                                                        <th scope="col">Disponible</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -334,6 +340,15 @@ export default function Prestamos() {
                                                                 <td>{libro.name}</td>
                                                                 <td>{libro.author}</td>
                                                                 <td>{libro.year}</td>
+
+                                                                {
+                                                                    libro.available ?
+                                                                        <td>Si</td>
+                                                                        :
+                                                                        <td>No</td>
+                                                                }
+
+
                                                             </tr>
                                                         ))
                                                     }
