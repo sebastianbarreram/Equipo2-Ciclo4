@@ -11,7 +11,17 @@ const Simulador = () => {
     const[valordelprestamo, setValordelprestamo]=useState("")
     const[cuotas, setCuotas]=useState("")
     const[tdi, setTdi]=useState("")
+    const[valor, setValor]=useState("")
     
+
+    const calcularcuota = async(e) => {
+
+        // se hace la formula considerando el siguiente link https://www.youtube.com/watch?v=N1-i1pXYXOE&t=161s
+         const cuotaestimada = (valordelprestamo*(tdi/100))/(1- ((1+(tdi/100)))**(cuotas*-1));
+         setValor(cuotaestimada)
+         alert("La cuota es: "+cuotaestimada); 
+        }
+
 
     const validar=(event)=>{
         
@@ -37,15 +47,6 @@ const Simulador = () => {
             return
         }
         
-
-        // eslint-disable-next-line
-        const calcularcuota = () => {
-              
-            // se hace la formula considerando el siguiente link https://www.youtube.com/watch?v=N1-i1pXYXOE&t=161s
-            //cuotaestimada= (valordelprestamo*(tdi/100))/1- ((1+(tdi/100)))^ (cuotas*-1)
-            }
-
-         //return cuotaestimada
 
     }        
 
@@ -88,17 +89,19 @@ const Simulador = () => {
                 />
 
                 <input
-                placeholder="Introduce la tasa de interes efectiva mensual"
+                placeholder="Introduce la tasa de interes efectiva mensual o anual segun desee calcular la cuota"
                 className="form-control mb-3"
                 type="numner"
                 onChange= {(e)=>{setTdi(e.target.value)}}
                 />
 
-                <button class="btn btn-primary btn-info btn-block " type="submit">Calcular</button>
+                <button className="btn btn-primary btn-info btn-block " type="submit" onClick={()=>calcularcuota()}>Calcular</button>
 
-            </form>
+               </form>
 
-                
+                <div>
+                {valor} 
+                </div>
 
              {/* Card * guiarse de inicio sesion*/}
 
