@@ -46,7 +46,7 @@ function App() {
     <Router>
       <Header />
 
-      <MyRoute path='/' exact component={Paginainicio} />
+      <Route path='/' exact component={Paginainicio} />
       <Route path='/iniciosesion' exact component={Login} />
       <Route path='/simulador' exact component={Simulador} />
       <Route path='/registrar' exact component={Registro} />
