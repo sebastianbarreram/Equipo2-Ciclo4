@@ -53,20 +53,28 @@ const Simulador = () => {
 
 
     return (
-
+        <div class="container">
+        <div class="row-4">
+        <div class="col-4">
+    
+        </div>
+        
+        <div class="row-4"></div>
+        <div class="row"></div>
 
         <div className="container">
-            <header className='py-2 bg-primary text-white'>
+            <header>
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-6">
-                            <h1><i className="fas fa-pencil-alt">Simulador de prestamos</i></h1>
+                        <div className="col-md-12">
+                            <h1><i className="fas -alt-text-center-font-weight-bold">            Simulador de préstamos</i></h1>
                         </div>
                     </div>
                 </div>
             </header>
-
-
+             
+        </div>
+        <div className="container">
 
 
             <form onSubmit={validar} className="form-groups">
@@ -96,8 +104,11 @@ const Simulador = () => {
                 />
 
                 <button className="btn btn-primary btn-info btn-block " type="submit" onClick={()=>calcularcuota()}>Calcular</button>
-
+            
                </form>
+            </div>
+            <div class="col"></div>
+            </div>
 
                 <div>
                 {valor} 
