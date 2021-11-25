@@ -63,15 +63,16 @@ const Simulador = () => {
         <div class="row"></div>
 
         <div className="container">
-            <header>
-                <div className="container">
-                    <div className="row">
-                        <div className="col-md-12">
-                            <h1><i className="fas -alt-text-center-font-weight-bold">            Simulador de préstamos</i></h1>
-                        </div>
-                    </div>
-                </div>
-            </header>
+            <header className='py-2'>
+                            <div className="container">
+                                <div className="row">
+                                    <div className="col-md-6">
+                                        <h1>Simulador de préstamos</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+
              
         </div>
         <div className="container">
