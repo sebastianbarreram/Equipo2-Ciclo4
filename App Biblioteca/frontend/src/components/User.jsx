@@ -32,19 +32,19 @@ export default function Prestamos() {
     }
 
 
-    const buscar = async (e) => {
-        if (e.target.value === '') {
-            return obtenerLibros()
+    // const buscar = async (e) => {
+    //     if (e.target.value === '') {
+    //         return obtenerLibros()
 
-        }
-        const buscar = e.target.value
-        const token = sessionStorage.getItem('token')
-        const respuesta = await Axios.get(`/book/listar/${buscar}/${sessionStorage.getItem('idusuario')}`, {
-            headers: { 'autorizacion': token }
+    //     }
+    //     const buscar = e.target.value
+    //     const token = sessionStorage.getItem('token')
+    //     const respuesta = await Axios.get(`/book/buscar/${buscar}`, {
+    //         headers: { 'autorizacion': token }
 
-        })
-        setLibros(respuesta.data)
-    }
+    //     })
+    //     setLibros(respuesta.data)
+    // }
 
 
     // const eliminar = async (id) => {
@@ -126,13 +126,13 @@ export default function Prestamos() {
 
                     </div> */}
 
-                    <div className="col-md-6 ml-auto">
+                    {/* <div className="col-md-6 ml-auto">
                         <div className="input-group">
                             <input className='form-control mr-sm-2' type="search" onChange={(e) => buscar(e)} placeholder='Buscar...' aria-label='Search' />
 
                         </div>
 
-                    </div>
+                    </div> */}
                 </div>
 
             </nav>
