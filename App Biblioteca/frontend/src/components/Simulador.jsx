@@ -53,15 +53,16 @@ const Simulador = () => {
 
 
     return (
-        <div class="container">
+        <div class="container mt-4">
         <div class="row-4">
         <div class="col-4">
     
         </div>
-        
+
         <div class="row-4"></div>
         <div class="row"></div>
 
+        <div class="col"></div>
         <div className="container">
             <header>
                 <div className="container">
@@ -72,6 +73,10 @@ const Simulador = () => {
                     </div>
                 </div>
             </header>
+            <div class="col"></div>
+            <div class="row"></div>
+            <div class="row"></div>
+
              
         </div>
         <div className="container">
@@ -111,7 +116,12 @@ const Simulador = () => {
             </div>
 
                 <div>
-                {valor} 
+                <nav aria-label="breadcrumbmt-4">
+                <ol class="breadcrumb mt-4">
+                <li class="breadcrumb-item activemt-4" aria-current="page"> La cuota estimada es de ${valor}</li>
+                </ol>
+                </nav>
+                 
                 </div>
 
              {/* Card * guiarse de inicio sesion*/}
