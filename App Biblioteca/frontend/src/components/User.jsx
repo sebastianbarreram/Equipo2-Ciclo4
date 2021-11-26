@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import Axios from 'axios'
 import Swal from 'sweetalert2'
 
@@ -32,40 +32,40 @@ export default function Prestamos() {
     }
 
 
-    const buscar = async (e) => {
-        if (e.target.value === '') {
-            return obtenerLibros()
+    // const buscar = async (e) => {
+    //     if (e.target.value === '') {
+    //         return obtenerLibros()
 
-        }
-        const buscar = e.target.value
-        const token = sessionStorage.getItem('token')
-        const respuesta = await Axios.get(`/book/listar/${buscar}/${sessionStorage.getItem('idusuario')}`, {
-            headers: { 'autorizacion': token }
+    //     }
+    //     const buscar = e.target.value
+    //     const token = sessionStorage.getItem('token')
+    //     const respuesta = await Axios.get(`/book/buscar/${buscar}`, {
+    //         headers: { 'autorizacion': token }
 
-        })
-        setLibros(respuesta.data)
-    }
+    //     })
+    //     setLibros(respuesta.data)
+    // }
 
 
-    const eliminar = async (id) => {
-        const token = sessionStorage.getItem('token')
-        const respuesta = await Axios.delete('/book/eliminar/' + id, {
-            headers: { 'autorizacion': token }
-        })
+    // const eliminar = async (id) => {
+    //     const token = sessionStorage.getItem('token')
+    //     const respuesta = await Axios.delete('/book/eliminar/' + id, {
+    //         headers: { 'autorizacion': token }
+    //     })
 
-        const mensaje = respuesta.data.mensaje
+    //     const mensaje = respuesta.data.mensaje
 
-        Swal.fire({
+    //     Swal.fire({
 
-            icon: 'error',
-            title: mensaje,
-            showConfirmButton: false,
-            timer: 1500
-        })
+    //         icon: 'error',
+    //         title: mensaje,
+    //         showConfirmButton: false,
+    //         timer: 1500
+    //     })
 
-        obtenerLibros()
+    //     obtenerLibros()
 
-    }
+    // }
 
     const guardar = async (e) => {
         e.preventDefault()
@@ -103,36 +103,36 @@ export default function Prestamos() {
     return (
         <div>
 
-            <header className='py-2 bg-primary text-white'>
-                <div className="container">
-                    <div className="row">
-                        <div className="col-md-6">
-                            <h1><i className="fas fa-pencil-alt">Libros</i></h1>
-                        </div>
-                    </div>
-                </div>
-            </header>
+            <header className='py-2'>
+                            <div className="container">
+                                <div className="row">
+                                    <div className="col-md-6">
+                                        <h1>Perfil de usuario</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
 
 
             <nav className="navbar py-4">
                 <div className="container">
 
-                    <div className="col-md-3">
+                    {/* <div className="col-md-3">
                         <Link to="#" className="btn btn-primary btn-block" data-toggle="modal" data-target="#addBook">
                             <i className='fas fa-plus'></i>
                             AGREGAR LIBRO
 
                         </Link>
 
-                    </div>
+                    </div> */}
 
-                    <div className="col-md-6 ml-auto">
+                    {/* <div className="col-md-6 ml-auto">
                         <div className="input-group">
                             <input className='form-control mr-sm-2' type="search" onChange={(e) => buscar(e)} placeholder='Buscar...' aria-label='Search' />
 
                         </div>
 
-                    </div>
+                    </div> */}
                 </div>
 
             </nav>
@@ -157,7 +157,7 @@ export default function Prestamos() {
                                             <th scope="col">NOMBRE</th>
                                             <th scope="col">AUTOR</th>
                                             <th scope="col">AÑO</th>
-                                            <th scope="col">OPCIONES</th>
+                                            {/* <th scope="col">OPCIONES</th> */}
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -170,10 +170,10 @@ export default function Prestamos() {
                                                     <td>{libro.author}</td>
                                                     <td>{libro.year}</td>
 
-                                                    <td>
+                                                    {/* <td>
                                                         <Link className='btn btn-warning mr-1' to={'/editar/' + libro._id}>Editar</Link>
                                                         <button className='btn btn-danger mr-1' onClick={() => eliminar(libro._id)}>Eliminar</button>
-                                                    </td>
+                                                    </td> */}
 
 
 
