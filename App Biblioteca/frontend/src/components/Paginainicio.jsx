@@ -43,6 +43,79 @@ export default function Paginainicio() {
                 </a>
             </div>
 
+            <div>
+              <container>
+              <div className="row"/>
+              <div className="col-text-center">    </div>
+              <div className="col-text-center"><h3>Noticias</h3></div>
+              <div className="col-text-center">    </div>
+              <div className="row">
+                  <div  className="col-4">
+                    <div class="card">
+                    <img src="..." class="card-img-top" alt="https://files.consumerfinance.gov/f/images/credit_myths_graphic.original.png"/>
+                    <div class="card-body">
+                        <h5 class="card-title">Titular noticia 1</h5>
+                        <p class="card-text">Resumen noticia uno</p>
+                        <a href="#" className="btn btn-primary btn-block">Go somewhere</a>
+                    </div>
+                    </div>
+                  </div>
+                  <div  className="col-4">
+                  <div class="card">
+                    <img src="..." class="card-img-top" alt="https://files.consumerfinance.gov/f/images/credit_myths_graphic.original.png"/>
+                    <div class="card-body">
+                        <h5 class="card-title">Titular noticia 2</h5>
+                        <p class="card-text">Resumen noticia 2</p>
+                        <a href="#" className="btn btn-primary btn-block">Go somewhere</a>
+                    </div>
+                    </div>
+                  </div>
+                  <div  className="col-4">
+                  <div class="card">
+                    <img src="..." class="card-img-top" alt="https://files.consumerfinance.gov/f/images/credit_myths_graphic.original.png"/>
+                    <div class="card-body">
+                        <h5 class="card-title">Titular noticia 3</h5>
+                        <p class="card-text">Resumen noticia 3</p>
+                        <a href="#" className="btn btn-primary btn-block">Go somewhere</a>
+                    </div>
+                    </div>
+                  </div>
+              </div>
+              </container>
+            </div>
+
+
+            {/* pie de pagina */}
+            <div>
+                <div class="seccion-pie">
+                <div class="logo-container">
+                    <a href="">
+                    <img
+                        class="center"
+                        src="./img/logobiblioteca.png"
+                        alt="Logo Bibilioteca Comunitaria"
+                    />
+                    </a>
+                </div>
+                <article>
+                    <br />
+                    <h2>Contáctenos</h2>
+                    <p>
+                    Sebastian Barrera : <i>sbarrera.96@hotmail.com</i>
+                    <br />
+                    Carolina Cova :
+                    <i>caromargui@gmail.com</i> <br />
+                    Sebastian Rentería :
+                    <i>sren97@gmail.com </i> <br />
+                    Diego Guisao :
+                    <i>diego.alexander.guisao@gmail.com </i> <br />
+                    Santiago Puello :
+                    <i>sepuellov@unal.edu.co </i> <br />
+                    </p>
+                </article>
+                </div>
+            </div>
+
         </>
     )
 }
