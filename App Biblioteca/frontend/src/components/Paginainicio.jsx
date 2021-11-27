@@ -47,36 +47,45 @@ export default function Paginainicio() {
               <container>
               <div className="row"/>
               <div className="col-text-center">    </div>
-              <div className="col-text-center"><h3>Noticias</h3></div>
               <div className="col-text-center">    </div>
               <div className="row">
                   <div  className="col-4">
+                  <br /> 
+                  <br />
+                  <br />
                     <div class="card">
-                    <img src="..." class="card-img-top" alt="https://files.consumerfinance.gov/f/images/credit_myths_graphic.original.png"/>
+                    {/* <img src="..." class="card-img-top" alt="https://files.consumerfinance.gov/f/images/credit_myths_graphic.original.png"/> */}
                     <div class="card-body">
-                        <h5 class="card-title">Titular noticia 1</h5>
-                        <p class="card-text">Resumen noticia uno</p>
-                        <a href="#" className="btn btn-primary btn-block">Go somewhere</a>
+                        <h5 class="card-title">Galerías de arte virtuales: características, imágenes y exposiciones de 20 galerías de arte online para ver desde casa</h5>
+                        <p class="card-text">Refresca tu vena artística, mediante esta visitas podras disfrutar, analizar y relajarte, al tiempo que contemplas las obras de arte.  </p>
+                        <a href="https://www.cinconoticias.com/galerias-de-arte-virtuales/" className="btn btn-primary btn-block">Quiero saber más</a>
+                    </div>
+                    </div>
+                  <br />
+                  </div>
+                  <div  className="col-4">
+                      <h2> Noticias principales </h2>
+                  <br />
+                  <div class="card">
+                    {/* <img src="..." class="card-img-top" alt="https://files.consumerfinance.gov/f/images/credit_myths_graphic.original.png"/> */}
+                    <div class="card-body">
+                        <h5 class="card-title">El Nobel de Literatura más desconocido habla al fin: "Tardé doce años en publicar mi primera novela. Pensé en dejarlo"</h5>
+                        <p class="card-text">El escritor tanzano mantiene cierta sensación de incredulidad sobre el galardón. “No sabía que era tan bueno”, bromea.</p>
+                        <a href="https://www.elindependiente.com/tendencias/cultura/2021/11/06/el-nobel-de-literatura-mas-desconocido-habla-al-fin-tarde-doce-anos-en-publicar-mi-primera-novela-pense-en-dejarlo/" className="btn btn-primary btn-block">Quiero saber más</a>
                     </div>
                     </div>
                   </div>
                   <div  className="col-4">
+                  <br /> 
+                  <br />
+                  <br />
                   <div class="card">
-                    <img src="..." class="card-img-top" alt="https://files.consumerfinance.gov/f/images/credit_myths_graphic.original.png"/>
+                    {/* <img src="img/loan.png" class="card-img-top"/> */}
                     <div class="card-body">
-                        <h5 class="card-title">Titular noticia 2</h5>
-                        <p class="card-text">Resumen noticia 2</p>
-                        <a href="#" className="btn btn-primary btn-block">Go somewhere</a>
-                    </div>
-                    </div>
-                  </div>
-                  <div  className="col-4">
-                  <div class="card">
-                    <img src="..." class="card-img-top" alt="https://files.consumerfinance.gov/f/images/credit_myths_graphic.original.png"/>
-                    <div class="card-body">
-                        <h5 class="card-title">Titular noticia 3</h5>
-                        <p class="card-text">Resumen noticia 3</p>
-                        <a href="#" className="btn btn-primary btn-block">Go somewhere</a>
+                        <h5 class="card-title">Sena tiene cupos para 2022: cómo inscribirse, fechas, cursos y horarios</h5>
+                        <p class="card-text">Las inscripciones para los programas presenciales del Servicio Nacional de Aprendizaje están abiertas hasta el miércoles 24 de noviembre de 2021.</p>
+                        <br />
+                        <a href="https://www.pulzo.com/economia/inscripciones-sena-2022-como-inscribirse-fechas-horarios-cursos-PP1089882" className="btn btn-primary btn-block">Quiero saber más</a>
                     </div>
                     </div>
                   </div>
@@ -89,29 +98,19 @@ export default function Paginainicio() {
             <div>
                 <div class="seccion-pie">
                 <div class="logo-container">
-                    <a href="">
-                    <img
-                        class="center"
-                        src="./img/logobiblioteca.png"
-                        alt="Logo Bibilioteca Comunitaria"
-                    />
-                    </a>
                 </div>
                 <article>
                     <br />
                     <h2>Contáctenos</h2>
                     <p>
-                    Sebastian Barrera : <i>sbarrera.96@hotmail.com</i>
+                    Correo: <i>contacto@bibliotecacomunitaria.com</i>
                     <br />
-                    Carolina Cova :
-                    <i>caromargui@gmail.com</i> <br />
-                    Sebastian Rentería :
-                    <i>sren97@gmail.com </i> <br />
-                    Diego Guisao :
-                    <i>diego.alexander.guisao@gmail.com </i> <br />
-                    Santiago Puello :
-                    <i>sepuellov@unal.edu.co </i> <br />
-                    </p>
+                    Teléfono: <i>3012578684</i> 
+                    <br />
+                    Ubicacion: <i>Medellin</i> 
+                    <br />
+                    Horario: <i>De Lunes a Viernes - 8:00 am a 6:00 pm</i> <br /> 
+                  </p>
                 </article>
                 </div>
             </div>
