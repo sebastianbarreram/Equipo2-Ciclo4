@@ -11,6 +11,7 @@ import Paginainicio from './components/Paginainicio';
 import Simulador from './components/Simulador';
 import Contactenos from './components/Contactenos';
 import Cursos from './components/Cursos';
+import Footer from './components/Footer';
 
 
 const estaAutenticado = () => {
@@ -57,9 +58,15 @@ function App() {
       <Route path='/contactenos' exact component={Contactenos} />
       <Route path='/cursos' exact component={Cursos} />
       <MyRoute path='/editar/:id' exact component={Actualizar} />
-
+      
+      <br/>
+      <br/>
+      <br/>
+      
+      <Footer/>
 
     </Router>
+    
   );
 }
 
