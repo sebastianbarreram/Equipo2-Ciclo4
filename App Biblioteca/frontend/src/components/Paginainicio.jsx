@@ -92,29 +92,6 @@ export default function Paginainicio() {
               </div>
               </container>
             </div>
-
-
-            {/* pie de pagina */}
-            <div>
-                <div class="seccion-pie">
-                <div class="logo-container">
-                </div>
-                <article>
-                    <br />
-                    <h2>Contáctenos</h2>
-                    <p>
-                    Correo: <i>contacto@bibliotecacomunitaria.com</i>
-                    <br />
-                    Teléfono: <i>3012578684</i> 
-                    <br />
-                    Ubicacion: <i>Medellin</i> 
-                    <br />
-                    Horario: <i>De Lunes a Viernes - 8:00 am a 6:00 pm</i> <br /> 
-                  </p>
-                </article>
-                </div>
-            </div>
-
         </>
     )
 }
