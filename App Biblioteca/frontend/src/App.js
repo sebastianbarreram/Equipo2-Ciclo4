@@ -9,6 +9,7 @@ import User from './components/User';
 import Actualizar from "./components/Actualizar";
 import Paginainicio from './components/Paginainicio';
 import Simulador from './components/Simulador';
+import Contactenos from './components/Contactenos';
 
 
 const estaAutenticado = () => {
@@ -52,6 +53,7 @@ function App() {
       <Route path='/registrar' exact component={Registro} />
       <Route path='/prestamos' exact component={Prestamos} />
       <Route path='/usuario' exact component={User} />
+      <Route path='/contactenos' exact component={Contactenos} />
       <MyRoute path='/editar/:id' exact component={Actualizar} />
 
 

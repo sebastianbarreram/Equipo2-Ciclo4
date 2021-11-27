@@ -79,11 +79,11 @@ export default function Paginainicio() {
                   <br /> 
                   <br />
                   <br />
-                  <div class="card">
+                  <div className="card">
                     {/* <img src="img/loan.png" class="card-img-top"/> */}
-                    <div class="card-body">
-                        <h5 class="card-title">Sena tiene cupos para 2022: cómo inscribirse, fechas, cursos y horarios</h5>
-                        <p class="card-text">Las inscripciones para los programas presenciales del Servicio Nacional de Aprendizaje están abiertas hasta el miércoles 24 de noviembre de 2021.</p>
+                    <div className="card-body">
+                        <h5 className="card-title">Sena tiene cupos para 2022: cómo inscribirse, fechas, cursos y horarios</h5>
+                        <p className="card-text">Las inscripciones para los programas presenciales del Servicio Nacional de Aprendizaje están abiertas hasta el miércoles 24 de noviembre de 2021.</p>
                         <br />
                         <a href="https://www.pulzo.com/economia/inscripciones-sena-2022-como-inscribirse-fechas-horarios-cursos-PP1089882" className="btn btn-primary btn-block">Quiero saber más</a>
                     </div>
