@@ -10,6 +10,7 @@ import Actualizar from "./components/Actualizar";
 import Paginainicio from './components/Paginainicio';
 import Simulador from './components/Simulador';
 import Contactenos from './components/Contactenos';
+import Cursos from './components/Cursos';
 
 
 const estaAutenticado = () => {
@@ -54,6 +55,7 @@ function App() {
       <Route path='/prestamos' exact component={Prestamos} />
       <Route path='/usuario' exact component={User} />
       <Route path='/contactenos' exact component={Contactenos} />
+      <Route path='/cursos' exact component={Cursos} />
       <MyRoute path='/editar/:id' exact component={Actualizar} />
 
 
