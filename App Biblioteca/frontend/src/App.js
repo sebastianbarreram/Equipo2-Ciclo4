@@ -15,21 +15,21 @@ const estaAutenticado = () => {
 
   const token = sessionStorage.getItem('token')
   if (token) {
-
+    console.log("en el if")
     return true
 
   }
   else {
-
+    console.log("en else")
     return false
 
   }
 }
-const MyRoute = (props) => {
-  return estaAutenticado() ? <Route{...props} /> : <Redirect to='/' />
+// const MyRoute = (props) => {
+//   return estaAutenticado() ? <Route{...props} /> : <Redirect to='/iniciosesion'/>
 
 
-}
+// }
 
 // const PublicRoute = (props) => {
 //   return estaAutenticado() ? <Redirect to='/' /> : <Route{...props} />
@@ -50,9 +50,10 @@ function App() {
       <Route path='/iniciosesion' exact component={Login} />
       <Route path='/simulador' exact component={Simulador} />
       <Route path='/registrar' exact component={Registro} />
-      <Route path='/prestamos' exact component={Prestamos} />
+      <Route path='/prestamos' exact render={() => (
+        estaAutenticado() ? <Prestamos /> : <Redirect to="/iniciosesion" />)} />
       <Route path='/usuario' exact component={User} />
-      <MyRoute path='/editar/:id' exact component={Actualizar} />
+      <Route path='/editar/:id' exact component={Actualizar} />
 
 
     </Router>

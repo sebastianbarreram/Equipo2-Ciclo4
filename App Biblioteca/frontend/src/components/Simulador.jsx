@@ -53,14 +53,14 @@ const Simulador = () => {
 
 
     return (
-        <div class="container">
-        <div class="row-4">
-        <div class="col-4">
+        <div className="container">
+        <div className="row-4">
+        <div className="col-4">
     
         </div>
         
-        <div class="row-4"></div>
-        <div class="row"></div>
+        <div className="row-4"></div>
+        <div className="row"></div>
 
         <div className="container">
             <header className='py-2'>
@@ -108,7 +108,7 @@ const Simulador = () => {
             
                </form>
             </div>
-            <div class="col"></div>
+            <div className="col"></div>
             </div>
 
                 <div>

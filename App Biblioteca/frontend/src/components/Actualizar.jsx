@@ -15,8 +15,8 @@ export default function Actualizar(props) {
 
 
     useEffect(() => {
-        obtenerLibro()
-
+        obtenerLibro();
+        console.log("esta en el useEffect")
     }, [])
 
 
@@ -105,7 +105,7 @@ export default function Actualizar(props) {
                                 <input type="text" className='form-control required' onChange={(e) => setAssign(e.target.value)} value={assign} />
                             </div>
 
-                            
+
                             <div className="form-group">
                                 <button className='btn btn-primary' type='submit'>EDITAR</button>
 

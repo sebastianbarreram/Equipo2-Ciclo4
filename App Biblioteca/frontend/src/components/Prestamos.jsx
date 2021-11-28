@@ -3,31 +3,38 @@ import { Link } from 'react-router-dom';
 import Axios from 'axios'
 import Swal from 'sweetalert2'
 
-export default function Prestamos() {
+export default function Prestamos(estaAutenticado) {
     const [libros, setLibros] = useState([])
 
     const [name, setName] = useState('')
     const [author, setAuthor] = useState('')
     const [year, setYear] = useState('')
 
-
     const [administrador, setAdmininistrador] = useState(false)
 
 
-
-
     useEffect(() => {
-        obtenerLibros()
+        const token = sessionStorage.getItem('token')
+        if (token) {
+            console.log("en if de prestamos")
+            obtenerLibros()
+
+        }
+        else {
+            console.log("en el else de prestamos")
+        }
+
 
         if (sessionStorage.getItem('administrador') === 'true') {
             setAdmininistrador(true)
         }
 
-
-
-
-
     }, [])
+
+
+
+
+
 
 
     const obtenerLibros = async () => {
@@ -74,6 +81,29 @@ export default function Prestamos() {
 
         obtenerLibros()
 
+    }
+
+    const prestar = async (id) => {
+        const available = false;
+        const assign = sessionStorage.getItem('idusuario')
+        const libro = {
+            available,
+            assign
+        }
+        const token = sessionStorage.getItem('token')
+        const respuesta = await Axios.put('/book/actualizar/' + id, libro, {
+            headers: { 'autorizacion': token }
+        })
+
+        const mensaje = respuesta.data.mensaje
+        console.log(mensaje)
+        Swal.fire({
+            icon: 'success',
+            title: "Libro prestado",
+            showConfirmButton: false,
+            timer: 1500
+        })
+        obtenerLibros()
     }
 
 
@@ -199,6 +229,12 @@ export default function Prestamos() {
                                                                 <td>
                                                                     <Link className='btn btn-warning mr-1' to={'/editar/' + libro._id} >EDITAR</Link>
                                                                     <button className='btn btn-danger mr-1' onClick={() => eliminar(libro._id)}>ELIMINAR</button>
+                                                                    {
+                                                                        libro.available ?
+                                                                            <button className='btn btn-success mr-1' onClick={() => prestar(libro._id)}>PRESTAR</button>
+                                                                            :
+                                                                            <button disabled className='btn btn-success mr-1'>PRESTAR</button>
+                                                                    }
                                                                 </td>
 
 
@@ -329,6 +365,7 @@ export default function Prestamos() {
                                                         <th scope="col">Autor</th>
                                                         <th scope="col">Año</th>
                                                         <th scope="col">Disponible</th>
+                                                        <th scope="col">Opciones</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -347,9 +384,17 @@ export default function Prestamos() {
                                                                         :
                                                                         <td>No</td>
                                                                 }
-
+                                                                <td>
+                                                                    {
+                                                                        libro.available ?
+                                                                            <button className='btn btn-success mr-1' onClick={() => prestar(libro._id)}>PRESTAR</button>
+                                                                            :
+                                                                            <button disabled className='btn btn-success mr-1'>PRESTAR</button>
+                                                                    }
+                                                                </td>
 
                                                             </tr>
+
                                                         ))
                                                     }
                                                 </tbody>

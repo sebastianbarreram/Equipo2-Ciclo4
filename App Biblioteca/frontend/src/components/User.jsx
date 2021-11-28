@@ -47,25 +47,28 @@ export default function Prestamos() {
     // }
 
 
-    // const eliminar = async (id) => {
-    //     const token = sessionStorage.getItem('token')
-    //     const respuesta = await Axios.delete('/book/eliminar/' + id, {
-    //         headers: { 'autorizacion': token }
-    //     })
+    const eliminarPrestamo = async (id) => {
+        const available = true;
+        const assign = ""
+        const libro = {
+            available,
+            assign
+        }
+        const token = sessionStorage.getItem('token')
+        const respuesta = await Axios.put('/book/actualizar/' + id, libro, {
+            headers: { 'autorizacion': token }
+        })
 
-    //     const mensaje = respuesta.data.mensaje
-
-    //     Swal.fire({
-
-    //         icon: 'error',
-    //         title: mensaje,
-    //         showConfirmButton: false,
-    //         timer: 1500
-    //     })
-
-    //     obtenerLibros()
-
-    // }
+        const mensaje = respuesta.data.mensaje
+        console.log(mensaje)
+        Swal.fire({
+            icon: 'success',
+            title: "Libro eliminado de tu lista",
+            showConfirmButton: false,
+            timer: 1500
+        })
+        obtenerLibros()
+    }
 
     const guardar = async (e) => {
         e.preventDefault()
@@ -104,14 +107,14 @@ export default function Prestamos() {
         <div>
 
             <header className='py-2'>
-                            <div className="container">
-                                <div className="row">
-                                    <div className="col-md-6">
-                                        <h1>Perfil de usuario</h1>
-                                    </div>
-                                </div>
-                            </div>
-                        </header>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-6">
+                            <h1>Perfil de usuario</h1>
+                        </div>
+                    </div>
+                </div>
+            </header>
 
 
             <nav className="navbar py-4">
@@ -157,7 +160,7 @@ export default function Prestamos() {
                                             <th scope="col">NOMBRE</th>
                                             <th scope="col">AUTOR</th>
                                             <th scope="col">AÑO</th>
-                                            {/* <th scope="col">OPCIONES</th> */}
+                                            <th scope="col">OPCIONES</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -170,10 +173,9 @@ export default function Prestamos() {
                                                     <td>{libro.author}</td>
                                                     <td>{libro.year}</td>
 
-                                                    {/* <td>
-                                                        <Link className='btn btn-warning mr-1' to={'/editar/' + libro._id}>Editar</Link>
-                                                        <button className='btn btn-danger mr-1' onClick={() => eliminar(libro._id)}>Eliminar</button>
-                                                    </td> */}
+                                                    <td>
+                                                        <button className='btn btn-danger mr-1' onClick={() => eliminarPrestamo(libro._id)}>ELIMINAR</button>
+                                                    </td>
 
 
 
