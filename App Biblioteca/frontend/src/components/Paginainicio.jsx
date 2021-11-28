@@ -43,6 +43,55 @@ export default function Paginainicio() {
                 </a>
             </div>
 
+            <div>
+              <container>
+              <div className="row"/>
+              <div className="col-text-center">    </div>
+              <div className="col-text-center">    </div>
+              <div className="row">
+                  <div  className="col-4">
+                  <br /> 
+                  <br />
+                  <br />
+                    <div class="card">
+                    {/* <img src="..." class="card-img-top" alt="https://files.consumerfinance.gov/f/images/credit_myths_graphic.original.png"/> */}
+                    <div class="card-body">
+                        <h5 class="card-title">Galerías de arte virtuales: características, imágenes y exposiciones de 20 galerías de arte online para ver desde casa</h5>
+                        <p class="card-text">Refresca tu vena artística, mediante esta visitas podras disfrutar, analizar y relajarte, al tiempo que contemplas las obras de arte.  </p>
+                        <a href="https://www.cinconoticias.com/galerias-de-arte-virtuales/" className="btn btn-primary btn-block">Quiero saber más</a>
+                    </div>
+                    </div>
+                  <br />
+                  </div>
+                  <div  className="col-4">
+                      <h2> Noticias principales </h2>
+                  <br />
+                  <div class="card">
+                    {/* <img src="..." class="card-img-top" alt="https://files.consumerfinance.gov/f/images/credit_myths_graphic.original.png"/> */}
+                    <div class="card-body">
+                        <h5 class="card-title">El Nobel de Literatura más desconocido habla al fin: "Tardé doce años en publicar mi primera novela. Pensé en dejarlo"</h5>
+                        <p class="card-text">El escritor tanzano mantiene cierta sensación de incredulidad sobre el galardón. “No sabía que era tan bueno”, bromea.</p>
+                        <a href="https://www.elindependiente.com/tendencias/cultura/2021/11/06/el-nobel-de-literatura-mas-desconocido-habla-al-fin-tarde-doce-anos-en-publicar-mi-primera-novela-pense-en-dejarlo/" className="btn btn-primary btn-block">Quiero saber más</a>
+                    </div>
+                    </div>
+                  </div>
+                  <div  className="col-4">
+                  <br /> 
+                  <br />
+                  <br />
+                  <div className="card">
+                    {/* <img src="img/loan.png" class="card-img-top"/> */}
+                    <div className="card-body">
+                        <h5 className="card-title">Sena tiene cupos para 2022: cómo inscribirse, fechas, cursos y horarios</h5>
+                        <p className="card-text">Las inscripciones para los programas presenciales del Servicio Nacional de Aprendizaje están abiertas hasta el miércoles 24 de noviembre de 2021.</p>
+                        <br />
+                        <a href="https://www.pulzo.com/economia/inscripciones-sena-2022-como-inscribirse-fechas-horarios-cursos-PP1089882" className="btn btn-primary btn-block">Quiero saber más</a>
+                    </div>
+                    </div>
+                  </div>
+              </div>
+              </container>
+            </div>
         </>
     )
 }

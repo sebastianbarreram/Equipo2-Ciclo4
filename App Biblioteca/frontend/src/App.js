@@ -9,6 +9,9 @@ import User from './components/User';
 import Actualizar from "./components/Actualizar";
 import Paginainicio from './components/Paginainicio';
 import Simulador from './components/Simulador';
+import Contactenos from './components/Contactenos';
+import Cursos from './components/Cursos';
+import Footer from './components/Footer';
 
 
 const estaAutenticado = () => {
@@ -53,10 +56,23 @@ function App() {
       <Route path='/prestamos' exact render={() => (
         estaAutenticado() ? <Prestamos /> : <Redirect to="/iniciosesion" />)} />
       <Route path='/usuario' exact component={User} />
+<<<<<<< HEAD
       <Route path='/editar/:id' exact component={Actualizar} />
 
+=======
+      <Route path='/contactenos' exact component={Contactenos} />
+      <Route path='/cursos' exact component={Cursos} />
+      <MyRoute path='/editar/:id' exact component={Actualizar} />
+      
+      <br/>
+      <br/>
+      <br/>
+      
+      <Footer/>
+>>>>>>> 235627c7b9cf02e265673a256ddb1ec726e3a1a6
 
     </Router>
+    
   );
 }
 

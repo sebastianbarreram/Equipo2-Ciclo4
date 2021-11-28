@@ -53,6 +53,7 @@ const Simulador = () => {
 
 
     return (
+<<<<<<< HEAD
         <div className="container">
         <div className="row-4">
         <div className="col-4">
@@ -61,17 +62,31 @@ const Simulador = () => {
         
         <div className="row-4"></div>
         <div className="row"></div>
+=======
+        <div class="container mt-4">
+        <div class="row-4">
+        <div class="col-4">
+    
+        </div>
 
+        <div class="row-4"></div>
+        <div class="row"></div>
+>>>>>>> 235627c7b9cf02e265673a256ddb1ec726e3a1a6
+
+        <div class="col"></div>
         <div className="container">
-            <header className='py-2'>
-                            <div className="container">
-                                <div className="row">
-                                    <div className="col-md-6">
-                                        <h1>Simulador de préstamos</h1>
-                                    </div>
-                                </div>
-                            </div>
-                        </header>
+            <header>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-12">
+                            <h1><i className="fas -alt-text-center-font-weight-bold">            Simulador de préstamos</i></h1>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="col"></div>
+            <div class="row"></div>
+            <div class="row"></div>
 
              
         </div>
@@ -112,7 +127,12 @@ const Simulador = () => {
             </div>
 
                 <div>
-                {valor} 
+                <nav aria-label="breadcrumbmt-4">
+                <ol class="breadcrumb mt-4">
+                <li class="breadcrumb-item activemt-4" aria-current="page"> La cuota estimada es de ${valor}</li>
+                </ol>
+                </nav>
+                 
                 </div>
 
              {/* Card * guiarse de inicio sesion*/}
@@ -122,5 +142,4 @@ const Simulador = () => {
 }
 
 export default Simulador
-
 
