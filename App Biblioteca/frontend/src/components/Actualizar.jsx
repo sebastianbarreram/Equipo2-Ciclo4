@@ -1,7 +1,7 @@
 
-import React, { useState, useEffect } from 'react'
-import Axios from 'axios'
-import Swal from 'sweetalert2'
+import React, { useState, useEffect } from 'react';
+import Axios from 'axios';
+import Swal from 'sweetalert2';
 
 
 export default function Actualizar(props) {
@@ -17,7 +17,7 @@ export default function Actualizar(props) {
     useEffect(() => {
         obtenerLibro();
         console.log("esta en el useEffect")
-    }, [])
+    })
 
 
     const obtenerLibro = async () => {
