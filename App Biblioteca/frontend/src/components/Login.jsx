@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import Axios from 'axios'
 import Swal from 'sweetalert2'
+import { Link } from 'react-router-dom';
 
 
 export default function Login() {
@@ -20,7 +21,7 @@ export default function Login() {
         if (mensaje !== 'Bienvenido') {
             Swal.fire({
                 icon: 'error',
-                title: mensaje,
+                title: "Correo o contraseña incorrectos",
                 showConfirmButton: false,
                 timer: 1500
             })
@@ -89,7 +90,7 @@ export default function Login() {
                                 </div>
 
                                 <input type="submit" value="INICIAR SESIÓN" className="btn btn-primary btn-block" />
-
+                                <Link className="form-group" to="/registrar">¿Aún no tienes un usuario? Regístrate aquí</Link>
                             </form>
 
 

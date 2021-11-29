@@ -10,6 +10,8 @@ import Actualizar from "./components/Actualizar";
 import Paginainicio from './components/Paginainicio';
 import Simulador from './components/Simulador';
 import Footer from './components/Footer';
+import Contactenos from './components/Contactenos'
+import Cursos from './components/Cursos';
 
 
 const estaAutenticado = () => {
@@ -55,6 +57,8 @@ function App() {
         estaAutenticado() ? <Prestamos /> : <Redirect to="/iniciosesion" />)} />
       <Route path='/usuario' exact component={User} />
       <Route path='/editar/:id' exact component={Actualizar} />
+      <Route path='/contactenos' exact component={Contactenos} />
+      <Route path='/cursos' exact component={Cursos} />
 
       <Footer/>
     </Router>
