@@ -19,7 +19,7 @@ const Simulador = () => {
         // se hace la formula considerando el siguiente link https://www.youtube.com/watch?v=N1-i1pXYXOE&t=161s
         const cuotaestimada = (valordelprestamo * (tdi / 100)) / (1 - ((1 + (tdi / 100))) ** (cuotas * -1));
         setValor(cuotaestimada)
-        alert("La cuota es: " + cuotaestimada);
+        // alert("La cuota es: " + cuotaestimada);
     }
 
 
@@ -68,7 +68,7 @@ const Simulador = () => {
                         <div className="container">
                             <div className="row">
                                 <div className="col-md-6">
-                                    <h1>Simulador de préstamos</h1>
+                                    <h2>Simulador de préstamos</h2>
                                 </div>
                             </div>
                         </div>

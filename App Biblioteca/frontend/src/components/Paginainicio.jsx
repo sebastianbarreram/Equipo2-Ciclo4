@@ -1,6 +1,13 @@
 import React from 'react'
 import imagen1 from './img/libros.jpg';
 import imagen2 from './img/banner.jpg';
+import loan_img from './img/loan.png'
+import logo_curso from './img/logocurso.png'
+import logo_libros from './img/logolibros.png'
+// import Sebastian_B from './img/Sebastian B.png'
+// import Carolina from "./img/Carolina.png"
+// import Diego from './img/Diego.png'
+
 
 export default function Paginainicio() {
     return (
@@ -42,55 +49,85 @@ export default function Paginainicio() {
                     <span className="sr-only">Next</span>
                 </a>
             </div>
+            <br />
+
+            <h2 className="text-center"> Servicios</h2>
+            {/* <!-- inicio sección de servicios --> */}
+            <div id="servicios" className="services-section">
+                <article className="services-info">
+                    <img className="services-info__imagen" src={loan_img} alt="" />
+                    <h3 className="services-info__title">Simulador</h3>
+                    <p className="services-info__text">
+                        En esta sección podrás simular las cuotas de
+                        tu prestamo bancario y evaluar su solicitud
+                    </p>
+                </article>
+                <article className="services-info">
+                    <img className="services-info__imagen" src={logo_curso} alt="" />
+                    <h3 className="services-info__title">Cursos</h3>
+                    <p className="services-info__text">
+                        En esta sección podrás encontrar todo los
+                        cursos disponibles y los cursos ya finalizados.
+                    </p>
+                </article>
+                <article className="services-info">
+                    <img className="services-info__imagen" src={logo_libros} alt="" />
+                    <h3 className="services-info__title">Préstamos</h3>
+                    <p className="services-info__text">
+                        En esta sección podrás acceder a los servicios
+                        relacionados con los libros disponibles.
+                    </p>
+                </article>
+            </div>
+            {/* <!-- fin sección de servicios --> */}
+
 
             <div>
-              <container>
-              <div className="row"/>
-              <div className="col-text-center">    </div>
-              <div className="col-text-center">    </div>
-              <div className="row">
-                  <div  className="col-4">
-                  <br /> 
-                  <br />
-                  <br />
-                    <div class="card">
-                    {/* <img src="..." class="card-img-top" alt="https://files.consumerfinance.gov/f/images/credit_myths_graphic.original.png"/> */}
-                    <div class="card-body">
-                        <h5 class="card-title">Galerías de arte virtuales: características, imágenes y exposiciones de 20 galerías de arte online para ver desde casa</h5>
-                        <p class="card-text">Refresca tu vena artística, mediante esta visitas podras disfrutar, analizar y relajarte, al tiempo que contemplas las obras de arte.  </p>
-                        <a href="https://www.cinconoticias.com/galerias-de-arte-virtuales/" className="btn btn-primary btn-block">Quiero saber más</a>
+                <container>
+                    <div className="row">
+                        <div className="col-4">
+                            <br />
+                            <br />
+                            <br />
+                            <div className="card">
+                                {/* <img src="..." className="card-img-top" alt="https://files.consumerfinance.gov/f/images/credit_myths_graphic.original.png"/> */}
+                                <div className="card-body">
+                                    <h5 className="card-title">Galerías de arte virtuales: características, imágenes y exposiciones de 20 galerías de arte online para ver desde casa</h5>
+                                    <p className="card-text">Refresca tu vena artística, mediante esta visitas podras disfrutar, analizar y relajarte, al tiempo que contemplas las obras de arte.  </p>
+                                    <a href="https://www.cinconoticias.com/galerias-de-arte-virtuales/" className="btn btn-primary btn-block">Quiero saber más</a>
+                                </div>
+                            </div>
+                            <br />
+                        </div>
+                        <div className="col-4 text-center">
+                            <h2> Noticias  </h2>
+                            <br />
+                            <div className="card">
+                                {/* <img src="..." className="card-img-top" alt="https://files.consumerfinance.gov/f/images/credit_myths_graphic.original.png"/> */}
+                                <div className="card-body">
+                                    <h5 className="card-title">El Nobel de Literatura más desconocido habla al fin: "Tardé doce años en publicar mi primera novela. Pensé en dejarlo"</h5>
+                                    <p className="card-text">El escritor tanzano mantiene cierta sensación de incredulidad sobre el galardón. “No sabía que era tan bueno”, bromea.</p>
+                                    <a href="https://www.elindependiente.com/tendencias/cultura/2021/11/06/el-nobel-de-literatura-mas-desconocido-habla-al-fin-tarde-doce-anos-en-publicar-mi-primera-novela-pense-en-dejarlo/" className="btn btn-primary btn-block">Quiero saber más</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-4">
+                            <br />
+                            <br />
+                            <br />
+                            <div className="card">
+                                {/* <img src="img/loan.png" className="card-img-top"/> */}
+                                <div className="card-body">
+                                    <h5 className="card-title">Sena tiene cupos para 2022: cómo inscribirse, fechas, cursos y horarios</h5>
+                                    <p className="card-text">Las inscripciones para los programas presenciales del Servicio Nacional de Aprendizaje están abiertas hasta el miércoles 24 de noviembre de 2021.</p>
+                                    <br />
+                                    <a href="https://www.pulzo.com/economia/inscripciones-sena-2022-como-inscribirse-fechas-horarios-cursos-PP1089882" className="btn btn-primary btn-block">Quiero saber más</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    </div>
-                  <br />
-                  </div>
-                  <div  className="col-4">
-                      <h2> Noticias principales </h2>
-                  <br />
-                  <div class="card">
-                    {/* <img src="..." class="card-img-top" alt="https://files.consumerfinance.gov/f/images/credit_myths_graphic.original.png"/> */}
-                    <div class="card-body">
-                        <h5 class="card-title">El Nobel de Literatura más desconocido habla al fin: "Tardé doce años en publicar mi primera novela. Pensé en dejarlo"</h5>
-                        <p class="card-text">El escritor tanzano mantiene cierta sensación de incredulidad sobre el galardón. “No sabía que era tan bueno”, bromea.</p>
-                        <a href="https://www.elindependiente.com/tendencias/cultura/2021/11/06/el-nobel-de-literatura-mas-desconocido-habla-al-fin-tarde-doce-anos-en-publicar-mi-primera-novela-pense-en-dejarlo/" className="btn btn-primary btn-block">Quiero saber más</a>
-                    </div>
-                    </div>
-                  </div>
-                  <div  className="col-4">
-                  <br /> 
-                  <br />
-                  <br />
-                  <div className="card">
-                    {/* <img src="img/loan.png" class="card-img-top"/> */}
-                    <div className="card-body">
-                        <h5 className="card-title">Sena tiene cupos para 2022: cómo inscribirse, fechas, cursos y horarios</h5>
-                        <p className="card-text">Las inscripciones para los programas presenciales del Servicio Nacional de Aprendizaje están abiertas hasta el miércoles 24 de noviembre de 2021.</p>
-                        <br />
-                        <a href="https://www.pulzo.com/economia/inscripciones-sena-2022-como-inscribirse-fechas-horarios-cursos-PP1089882" className="btn btn-primary btn-block">Quiero saber más</a>
-                    </div>
-                    </div>
-                  </div>
-              </div>
-              </container>
+                </container>
+
             </div>
         </>
     )

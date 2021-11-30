@@ -59,7 +59,7 @@ function App() {
       <Route path='/editar/:id' exact component={Actualizar} />
       <Route path='/contactenos' exact component={Contactenos} />
       <Route path='/cursos' exact component={Cursos} />
-
+      <br/>
       <Footer/>
     </Router>
   );

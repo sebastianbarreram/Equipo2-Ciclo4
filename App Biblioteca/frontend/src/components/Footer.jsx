@@ -6,6 +6,7 @@ function Footer() {
     return (
             <footer className="bg-dark text-white py-4">
                 <div className="container">
+                    <br/>
                     <nav className="row">
                         <a href="/" className="col-3 text-reset text-uppercase d-flex aling-items-center">
                             <img src={logo} width="200" alt="" className="img-logo mr-2"/></a>

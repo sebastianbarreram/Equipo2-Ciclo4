@@ -110,7 +110,7 @@ export default function Prestamos() {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-6">
-                            <h1>Perfil de usuario</h1>
+                            <h2>Perfil de usuario</h2>
                         </div>
                     </div>
                 </div>

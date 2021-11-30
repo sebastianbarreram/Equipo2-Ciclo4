@@ -151,17 +151,19 @@ export default function Prestamos(estaAutenticado) {
                             <div className="container">
                                 <div className="row">
                                     <div className="col-md-6">
-                                        <h1>Libros Administrador</h1>
+                                        <h2>Libros Administrador</h2>
                                     </div>
                                 </div>
                             </div>
                         </header>
 
-                        <p>
-                            En esta sección puedes editar la base de datos de libros
-                            disponible para que el usuario registrado pueda realizar
-                            el préstamo del material bibliográfico disponible
-                        </p>
+                        <div className="container">
+                            <p>
+                                En esta sección puedes editar la base de datos de libros
+                                disponible para que el usuario registrado pueda realizar
+                                el préstamo del material bibliográfico disponible
+                            </p>
+                        </div>
 
 
                         <nav className="navbar py-4">
@@ -319,18 +321,20 @@ export default function Prestamos(estaAutenticado) {
                             <div className="container">
                                 <div className="row">
                                     <div className="col-md-6">
-                                        <h1>¡Busca tu libro preferido!</h1>
+                                        <h2>¡Busca tu libro preferido!</h2>
                                     </div>
                                 </div>
                             </div>
                         </header>
 
-                        <p>
-                            Si te apasiona el maravilloso mundo de la lectura estás en el lugar
-                            indicado, en esta sección encontrarás una gran variedad
-                            de generos literarios, asi que busca tu libro preferido, préstalo y
-                            a leer...
-                        </p>
+                        <div className="container">
+                            <p>
+                                Si te apasiona el maravilloso mundo de la lectura estás en el lugar
+                                indicado, en esta sección encontrarás una gran variedad
+                                de generos literarios, asi que busca tu libro preferido, préstalo y
+                                a leer...
+                            </p>
+                        </div>
 
                         <nav className="navbar py-4">
                             <div className="container">

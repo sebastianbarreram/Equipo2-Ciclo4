@@ -35,7 +35,7 @@ export default function Header() {
                         <ul className="navbar-nav ml-auto">
                             <div className="nav navbar-nav">
                                 <Link className="nav-item nav-link" to='/contactenos'>Contáctenos</Link>
-                                <Link className="nav-item nav-link" to='/cursos'>Cursos</Link>
+                                {/* <Link className="nav-item nav-link" to='/cursos'>Cursos</Link> */}
                                 <Link className="nav-item nav-link" to="/simulador">Simulador</Link>
                                 <Link className="nav-item nav-link" to="/prestamos">Préstamos</Link>
 
