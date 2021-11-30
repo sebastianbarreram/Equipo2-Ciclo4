@@ -99,7 +99,7 @@ export default function Prestamos(estaAutenticado) {
         console.log(mensaje)
         Swal.fire({
             icon: 'success',
-            title: "Libro prestado",
+            title: "Libro agregado a tu lista",
             showConfirmButton: false,
             timer: 1500
         })

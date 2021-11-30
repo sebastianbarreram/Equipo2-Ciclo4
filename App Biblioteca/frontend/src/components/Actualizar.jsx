@@ -17,7 +17,7 @@ export default function Actualizar(props) {
     useEffect(() => {
         obtenerLibro();
         console.log("esta en el useEffect")
-    })
+    },[])
 
 
     const obtenerLibro = async () => {
